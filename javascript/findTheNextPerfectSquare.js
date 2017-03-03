@@ -15,3 +15,14 @@ You may assume the parameter is positive.
 function findNextSquare1(sq) {
   return Math.sqrt(sq)%1? -1 : Math.pow(Math.sqrt(sq)+1,2);
 }
+
+
+// SOLUTION 2:
+function findNextSquare2(sq) {
+  var number = Math.sqrt(sq);
+  if(Math.round(number) === number) {
+    return Math.pow(++number, 2)
+  } else {
+  	return -1;
+	}
+}
