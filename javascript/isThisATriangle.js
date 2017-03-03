@@ -8,13 +8,13 @@ The method should return true if a triangle can be built with the sides of given
 
 
 // SOLUTION 1:
-function isTriangle(a,b,c)
+function isTriangle1(a,b,c)
 {
    return a + b > c && a + c > b && c + b > a;
 }
 
 // SOLUTION 2:
-function isTriangle(a,b,c)
+function isTriangle2(a,b,c)
 {
   [a, b, c] = [a, b, c].sort((x, y) => x-y);
   
