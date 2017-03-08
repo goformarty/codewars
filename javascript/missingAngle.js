@@ -17,12 +17,16 @@ o |    \ h
 
 */
 
-function missingAngle(h,a,o){
-  if (h===0){
-	h = Math.sqrt(a*a + o*o); 
+function missingAngle(h,a,o) {
+	var angle;
+   if (h===0){
+   	angle =
   }
   else if (a===0) {
-
+    angle =
   }
-  else {}
+  else {
+    angle = Math.cos(a/h);
+  }
+  return Math.round(angle * (180 / Math.PI));
 }
