@@ -19,14 +19,7 @@ o |    \ h
 
 function missingAngle(h,a,o) {
 	var angle;
-   if (h===0){
-   	angle = Math.tan(o/a);
-  }
-  else if (a===0) {
-    angle = Math.sin(o/h);
-  }
-  else {
-    angle = Math.cos(a/h);
-  }
+   (h===0) ? angle = Math.tan(o/a) ? (a===0) : angle = Math.sin(o/h) : angle = Math.cos(a/h);
   return Math.round(angle * (180 / Math.PI));
 }
+
