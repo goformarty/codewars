@@ -20,10 +20,10 @@ o |    \ h
 function missingAngle(h,a,o) {
 	var angle;
    if (h===0){
-   	angle =
+   	angle = Math.tan(o/a);
   }
   else if (a===0) {
-    angle =
+    angle = Math.sin(o/h);
   }
   else {
     angle = Math.cos(a/h);
