@@ -11,3 +11,25 @@ If three sides cannot form triangle, or one angle is 180° (which turns triangle
 Input parameters are sides of given triangle. All input values are non-negative floating point or integer numbers (or both).
 
 /*
+
+/* Should return ᐃ type:
+  0 : if ᐃ cannot be made with given sides
+  1 : acute ᐃ
+  2 : right ᐃ
+  3 : obtuse ᐃ
+*/
+
+// SOLUTION 1
+
+function triangleType1(a, b, c){
+  var myArray = [];
+  myArray.push(a,b,c);
+  var sortedArray = myArray.sort(function(a,b){return (a-b);});
+  a = sortedArray[0];
+  b = sortedArray[1];
+  c = sortedArray[2];
+  var x = Math.pow(a,2) + Math.pow(b,2);
+  var y = Math.pow(c,2);
+  
+  return (a+b<=c) ? 0 : (x>y) ? 1 : (x===y) ? 2 : 3;
+}
