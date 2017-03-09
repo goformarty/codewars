@@ -22,12 +22,8 @@ Input parameters are sides of given triangle. All input values are non-negative 
 // SOLUTION 1
 
 function triangleType1(a, b, c){
-  var myArray = [];
-  myArray.push(a,b,c);
-  var sortedArray = myArray.sort(function(a,b){return (a-b);});
-  a = sortedArray[0];
-  b = sortedArray[1];
-  c = sortedArray[2];
+  myArray = [a,b,c].sort(function(a,b){return (a-b);});
+  a = myArray[0], b = myArray[1], c = myArray[2];
   var x = Math.pow(a,2) + Math.pow(b,2);
   var y = Math.pow(c,2);
   
