@@ -33,3 +33,14 @@ function triangleType1(a, b, c){
   
   return (a+b<=c) ? 0 : (x>y) ? 1 : (x===y) ? 2 : 3;
 }
+
+// SOLUTION 2 
+
+function triangleType2(a, b, c){
+  var max = Math.max(a,b,c);
+  
+  if (a+b+c <= 2*max) return 0;
+  if (2*max*max === a*a+b*b+c*c) return 2;
+  if (2*max*max > a*a+b*b+c*c) return 3;
+  return 1;
+}
