@@ -16,10 +16,10 @@ o |    \ h
      a
 
 */
-
-function missingAngle(h,a,o) {
-	var angle;
-   (h===0) ? angle = Math.tan(o/a) ? (a===0) : angle = Math.sin(o/h) : angle = Math.cos(a/h);
-  return Math.round(angle * (180 / Math.PI));
+// SOLUTION 1
+function missingAngle1(h,a,o){
+	var radians;
+	(h===0) ? radians = Math.atan(o/a) : (a===0) ? radians = Math.asin(o/h) : radians = Math.acos(a/h);
+  return Math.round(radians * 180 / Math.PI);
 }
 
