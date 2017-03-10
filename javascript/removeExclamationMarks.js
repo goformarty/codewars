@@ -3,5 +3,5 @@ all exclamation marks from a given string. */
 
 // SOLUTION 1
 function removeExclamationMarks1(s) {
-   return s.replace(/\!/g,"");
+   return s.replace(/!/g,"");
 }
