@@ -6,3 +6,11 @@ Given [34, -345, -1, 100] your solution will return -345
 You can assume, for the purpose of this kata, that the supplied array will not be empty.
 
 */
+
+// SOLUTION 1
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+  args = args.sort(function(a, b){return a-b});
+    return args[0];
+  }
+}
