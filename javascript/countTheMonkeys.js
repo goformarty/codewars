@@ -11,3 +11,11 @@ For example, if n = 10:
 
 return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] */
 
+// SOLUTION 1
+function monkeyCount1(n) {
+var arr = [];
+for (var i=1; i<=n; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
