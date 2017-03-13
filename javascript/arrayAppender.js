@@ -8,3 +8,8 @@ var array2 = [1,2,3]
 After using your appendArrays function, the result should be [a,b,c,1,2,3]
 
 Your function should also be able to handle nested arrays.*/
+
+// SOLUTION 1
+function appendArrays1(arr1, arr2) {
+  return arr1.concat(arr2);
+}
