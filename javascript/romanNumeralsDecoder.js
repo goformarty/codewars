@@ -9,5 +9,19 @@ in descending order: MDCLXVI.
 
 Example:
 
-solution(1000); // should return 'M' /*
+solution(1000); // should return 'M' */
 
+// SOLUTION 1 
+function solution(number){
+  var roman = '';
+  var romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+  var decimal = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+
+  for (var i = 0; i < decimal.length; i++) {
+    while (decimal[i] <= number) {
+      roman += romanNumeral[i];
+      number -= decimal[i];
+    }
+  }
+  return roman;
+}
