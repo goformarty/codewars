@@ -22,3 +22,13 @@ String.prototype.toJadenCase1 = function () {
 
   return words.join(' ');
 };
+
+//SOLUTION 2
+String.prototype.toJadenCase2 = function () {
+
+  function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+  return this.split(' ').map(capitalizeFirstLetter).join(' ');
+};
