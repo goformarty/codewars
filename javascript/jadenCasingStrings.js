@@ -12,3 +12,13 @@ Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 */
 
+//SOLUTION 1 
+String.prototype.toJadenCase1 = function () {
+  var words = this.split(' ');
+
+  for(var i = 0, wordsLen = words.length; i < wordsLen; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+
+  return words.join(' ');
+};
