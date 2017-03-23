@@ -30,3 +30,15 @@ function domainName1(url){
   index = substring.indexOf('.');
   return substring.slice(0, index);
 }
+
+//SOLUTION 2
+// using split()
+function domainName2(url){
+  if (url.indexOf("://") != -1) { 
+    url = url.split("://")[1]; 
+  }
+  if (url.indexOf("www.") != -1) {
+    url = url.split("www.")[1];  
+  }
+  return url.split(".")[0];
+}
