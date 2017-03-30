@@ -29,3 +29,24 @@ function blackOrWhiteKey1(keyPressCount) {
       return "white";
     }
 }
+
+
+// SOLUTION 2
+function blackOrWhiteKey2(keyPressCount) {
+    if (keyPressCount<=3) {
+      keyPressCount = keyPressCount + 9;
+    }
+    else {
+      keyPressCount = keyPressCount%88 - 3; 
+    }
+    
+    var rest = keyPressCount%12;
+    var black = [2,4,7,9,11]
+    
+    if (black.includes(rest)) {
+      return 'black';
+    }
+    else {
+      return "white";
+    }
+}
