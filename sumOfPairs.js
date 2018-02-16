@@ -26,7 +26,7 @@
 
 // NOTE: There will also be lists tested of lengths upwards of 10,000,000 elements. Be sure your code doesn't time out.
 
-var sum_pairs=function(ints, s){
+var sum_pairs = function (ints, s) {
 	if (!isNaN(s)) {
 		var seenVals = {};
 		for (var i = 0; i < ints.length; i++) {
@@ -36,6 +36,16 @@ var sum_pairs=function(ints, s){
 			seenVals[s - ints[i]] = true;
 		}
 	} else {
-		  return null;
-  }
+		return null;
+	}
+};
+
+var sum_pairs2 = function (ints, s) {
+	var seen = {};
+	for (var i = 0; i < ints.length; ++i) {
+		if (seen[s - ints[i]]) {
+			return [s - ints[i], ints[i]];
+		}
+		seen[ints[i]] = true;
+	}
 };
