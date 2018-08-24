@@ -14,6 +14,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(reverse(-134));
         System.out.println(reverse2(-1000));
+        System.out.println(reverse3(-951));
     }
 
     private static int reverse(int number) {
@@ -36,5 +37,10 @@ public class Main {
         int reversedNumber = Integer.parseInt(new StringBuilder().append(Math.abs(number)).reverse().toString());
 
         return negativeNumber ? -reversedNumber : reversedNumber;
+    }
+
+    private static int reverse3(int number) {
+        int reversedNumber = Integer.parseInt(new StringBuilder().append(Math.abs(number)).reverse().toString());
+        return number < 0 ? -reversedNumber : reversedNumber;
     }
 }
