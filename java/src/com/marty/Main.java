@@ -13,22 +13,28 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println(reverse(-134));
+        System.out.println(reverse2(-1000));
     }
-    public static int reverse(int number) {
+
+    private static int reverse(int number) {
 
         int absNum = Math.abs(number);
         String numAsString = Integer.toString(absNum);
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i = numAsString.length() - 1; i>=0; i--) {
+        for (int i = numAsString.length() - 1; i >= 0; i--) {
             sb.append(numAsString.charAt(i));
         }
         int finalNum = Integer.parseInt(sb.toString());
-        if (number < 0) {
-            return -finalNum;
-        }
-        return finalNum;
+        return (number < 0) ? -finalNum : finalNum;
     }
 
+    private static int reverse2(int number) {
+        boolean negativeNumber = (number < 0) ? true : false;
+
+        int reversedNumber = Integer.parseInt(new StringBuilder().append(Math.abs(number)).reverse().toString());
+
+        return negativeNumber ? -reversedNumber : reversedNumber;
+    }
 }
