@@ -1,7 +1,6 @@
 package com.marty;
 
-public class Main {
-
+public class ConvertTimeToString {
     public static void main(String[] args) {
         System.out.println(convertTime(90062));
     }

@@ -1,7 +1,6 @@
 package com.marty;
 
-public class Main {
-
+public class GetTheMiddleCharacter {
     public static void main(String[] args) {
         System.out.println(getMiddle("abbc"));
     }

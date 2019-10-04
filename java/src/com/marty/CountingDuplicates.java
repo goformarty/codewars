@@ -22,6 +22,9 @@ import java.util.Map;
  */
 
 public class CountingDuplicates {
+    public static void main(String[] Args) {
+        System.out.println(duplicateCount("aAbc11"));
+    }
     public static int duplicateCount(String text) {
         int count = 0;
         Map<Character, Integer> map = new HashMap();
